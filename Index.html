@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Proposal Message</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #ff4d4d;
+            color: white;
+            cursor: pointer;
+        }
+        #message {
+            display: none;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff1a1a;
+        }
+        .heart {
+            color: red;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Enter the Secret Code</h2>
+        <input type="password" id="codeInput" placeholder="Enter Code">
+        <button onclick="checkCode()">Unlock</button>
+        
+        <div id="message">
+            <p class="heart">❤️</p>
+            <p>Happy Propose Day! Will you be mine forever? 💍❤️</p>
+        </div>
+    </div>
+
+    <script>
+        function checkCode() {
+            var code = document.getElementById("codeInput").value;
+            if (code === "love2024") { 
+                document.getElementById("message").style.display = "block";
+            } else {
+                alert("Oops! Wrong code, try again.");
+            }
+        }
+    </script>
+
+</body>
+</html>
